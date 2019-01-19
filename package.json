@@ -1,0 +1,13 @@
+{
+  "name": "rouy",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "path-to-regexp": "^3.0.0"
+  },
+  "devDependencies": {
+    "lerna": "^2.11.0"
+  }
+}
