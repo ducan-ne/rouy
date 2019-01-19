@@ -1,7 +1,7 @@
 {
   "name": "rouy",
   "version": "0.0.1",
-  "main": "index.js",
+  "main": "rouy.js",
   "license": "MIT",
   "repository": {
     "type": "git",
