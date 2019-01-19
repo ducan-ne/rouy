@@ -7,11 +7,7 @@ const { Controller, listen } = require('rouy')
 const ParseQuery = require('rouy/modules/ParseQuery')
 class UserInfo extends Controller {
   async handler() {
-    console.log(this.query)
-    await new Promise(resolve => {
-      setTimeout(resolve, 1e3)
-    })
-    return { ahihi: true }
+    return { vuon_hong_ngay_xua: 'da ua tan' }
   }
   match() {
     return this.test('/users/:user')
