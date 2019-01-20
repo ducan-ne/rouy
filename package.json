@@ -7,7 +7,6 @@
     "type": "git",
     "url": "https://github.com/ancm-s/rouy"
   },
-  "dependencies": {},
   "devDependencies": {
     "lerna": "^2.11.0"
   }
