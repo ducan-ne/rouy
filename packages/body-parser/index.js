@@ -1,4 +1,4 @@
-const { Controller } = require('../rouy')
+const { Controller } = require('rouy')
 
 module.exports = createParser
 
