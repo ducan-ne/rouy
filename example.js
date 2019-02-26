@@ -22,12 +22,13 @@ const ParseQuery = require('./modules/ParseQuery')
 // }
 
 function UserInfo() {
+  if (!this.test('/test/hello')) return this.next()
   return this.query
 }
 
-UserInfo.match = function() {
-  return this.test('/users/:user')
-}
+// UserInfo.match = function() {
+//   return this.test('/users/:user')
+// }
 
 class Otherwise extends Controller {
   handle(req, res) {

@@ -43,3 +43,16 @@ test('functional with match string', async function() {
   expect(body).toEqual('hello')
   server.close()
 })
+
+test('functional with match inside handle', async function() {
+  function Test() {
+    if (!this.test('/test/hello')) return this.next()
+    return '"hello"'
+  }
+
+  let server = await createServer(Test)
+
+  let { body } = await request(server, '/test/hello')
+  expect(body).toEqual('hello')
+  server.close()
+})

@@ -30,7 +30,7 @@ function HelloWorld(req, res) {
 function HelloWorld2(req, res) {
   return 'hello world, 2020'
 }
-HelloWorld2.path = '/hello-world'
+HelloWorld2.match = '/hello-world'
 
 Rouy.listen([ParseQuery(), UserInfo, Otherwise, HelloWorld, HelloWorld2], 3000)
 ```
