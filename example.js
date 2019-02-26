@@ -25,6 +25,10 @@ function UserInfo() {
   return this.query
 }
 
+UserInfo.match = function() {
+  return this.test('/users/:user')
+}
+
 class Otherwise extends Controller {
   handle(req, res) {
     return '404'
