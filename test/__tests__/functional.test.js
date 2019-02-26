@@ -29,3 +29,17 @@ test('functional with match fn', async function() {
   expect(body).toEqual('hello')
   server.close()
 })
+
+test('functional with match string', async function() {
+  function Test() {
+    return '"hello"'
+  }
+
+  Test.match = '/test/:hello'
+
+  let server = await createServer(Test)
+
+  let { body } = await request(server, '/test/xin-chao')
+  expect(body).toEqual('hello')
+  server.close()
+})
