@@ -8,6 +8,11 @@
     "url": "https://github.com/ancm-s/rouy"
   },
   "devDependencies": {
-    "lerna": "^2.11.0"
+    "got": "^9.6.0",
+    "jest": "^24.1.0",
+    "lerna": "^3.10.6"
+  },
+  "scripts": {
+    "test": "jest"
   }
 }

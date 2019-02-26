@@ -6,7 +6,7 @@ Example Code:
 const Rouy = require('rouy')
 const ParseQuery = require('rouy/modules/ParseQuery')
 class UserInfo extends Rouy.Controller {
-  async handler() {
+  async handle() {
     return { vuon_hong_ngay_xua: 'da ua tan' }
   }
   match() {
@@ -15,7 +15,7 @@ class UserInfo extends Rouy.Controller {
 }
 
 class Otherwise extends Rouy.Controller {
-  handler(req, res) {
+  handle(req, res) {
     return '404'
   }
 }
