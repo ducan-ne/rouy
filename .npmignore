@@ -3,3 +3,4 @@ yarn.lock
 .DS_STORE
 .yarn-error.log
 test
+benchmarks
