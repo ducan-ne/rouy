@@ -2,10 +2,10 @@ const Rouy = require('../../rouy')
 const request = require('../common/request')
 const createServer = require('../common/create-server')
 
-it('should run life cycle pre() before handle()', async function() {
+it('should run life cycle pre() before handler()', async function() {
   expect.assertions(1)
   class Test extends Rouy.Controller {
-    async handle() {
+    async handler() {
       return '"hello from rouy"'
     }
 
@@ -23,10 +23,10 @@ it('should run life cycle pre() before handle()', async function() {
   server.close()
 })
 
-it('should run life cycle post() after handle()', async function() {
+it('should run life cycle post() after handler()', async function() {
   expect.assertions(1)
   class Test extends Rouy.Controller {
-    async handle() {
+    async handler() {
       return '"hello from rouy"'
     }
 

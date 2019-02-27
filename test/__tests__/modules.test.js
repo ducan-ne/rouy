@@ -5,7 +5,7 @@ const ParseQuery = require('../../modules/ParseQuery')
 
 it('modules: ParseQuery', async function() {
   class Test extends Rouy.Controller {
-    async handle() {
+    async handler() {
       return this.query
     }
   }

@@ -6,7 +6,7 @@ const Validator = require('../../packages/validator')
 
 test('should return required', async function() {
   class Test extends Rouy.Controller {
-    async handle() {
+    async handler() {
       await new Promise(resolve => {
         setTimeout(resolve, 1e3)
       })
@@ -41,7 +41,7 @@ test('should return required', async function() {
 
 test('should return req.body', async function() {
   class Test extends Rouy.Controller {
-    handle() {
+    handler() {
       return this.query
     }
     // render() {
@@ -69,7 +69,7 @@ test('should return req.body', async function() {
 
 test('validate array', async function() {
   class Test extends Rouy.Controller {
-    handle() {
+    handler() {
       return this.query
     }
     // render() {

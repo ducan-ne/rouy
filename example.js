@@ -8,7 +8,7 @@ require('node-jsx').install({ extension: '.jsx' })
 const html = require('./html')
 
 // class UserInfo extends Controller {
-//   // async handle() {
+//   // async handler() {
 //   //   await new Promise(resolve => {
 //   //     setTimeout(resolve, 1e3)
 //   //   })
@@ -37,7 +37,7 @@ const html = require('./html')
 // }
 
 class Otherwise extends Controller {
-  handle(req, res) {
+  handler(req, res) {
     return '404'
   }
 }

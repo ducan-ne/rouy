@@ -4,7 +4,7 @@ const createServer = require('../common/create-server')
 
 test('should connect to Controller Test', async function() {
   class Test extends Controller {
-    async handle() {
+    async handler() {
       return '"hello from rouy"'
     }
 
@@ -21,7 +21,7 @@ test('should connect to Controller Test', async function() {
 
 test("should can't connect to Controller Test", async function() {
   class Test extends Controller {
-    async handle() {
+    async handler() {
       return '"hello from rouy"'
     }
 
@@ -38,7 +38,7 @@ test("should can't connect to Controller Test", async function() {
 
 test('should return valid params', async function() {
   class Test extends Controller {
-    handle() {
+    handler() {
       return this.params
     }
 

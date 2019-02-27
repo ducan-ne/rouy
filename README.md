@@ -1,4 +1,6 @@
-A simple and flexible web framework for NODE JS, heavily inspired by React 🔥 🚀
+A 2.5kb web framework 👩‍🌾
+
+Rouy is simple and flexible web framework for NODE JS, heavily inspired by React 🔥 🚀
 
 Example Code:
 
@@ -6,7 +8,7 @@ Example Code:
 const Rouy = require('rouy')
 const ParseQuery = require('rouy/modules/ParseQuery')
 class UserInfo extends Rouy.Controller {
-  async handle() {
+  async handler() {
     return { vuon_hong_ngay_xua: 'da ua tan' }
   }
   match() {
@@ -15,7 +17,7 @@ class UserInfo extends Rouy.Controller {
 }
 
 class Otherwise extends Rouy.Controller {
-  handle(req, res) {
+  handler(req, res) {
     return '404'
   }
 }

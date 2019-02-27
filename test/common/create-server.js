@@ -6,7 +6,7 @@ function arrayify(val) {
 
 module.exports = function createServer(ctrl) {
   class Otherwise extends Controller {
-    handle() {
+    handler() {
       return '404'
     }
   }

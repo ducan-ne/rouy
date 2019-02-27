@@ -5,7 +5,7 @@ module.exports = Create
 function Create() {
   let middlewares = Array.from(arguments)
   class Ctrl extends Controller {
-    async handle(req, res, next) {
+    async handler(req, res, next) {
       let promises = middlewares.map(
         mid =>
           new Promise(resolve => {
