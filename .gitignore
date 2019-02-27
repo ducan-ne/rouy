@@ -4,3 +4,4 @@ yarn.lock
 yarn-error.log
 packages/
 benchmarks/result
+lerna-debug.log
