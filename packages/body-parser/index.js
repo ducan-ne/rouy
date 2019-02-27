@@ -26,6 +26,7 @@ function createParser(options = {}) {
               break
           }
         }
+        this.body = req.body
         resolve()
         next()
       })

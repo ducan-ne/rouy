@@ -1,30 +1,36 @@
 const { Controller, listen } = require('./rouy')
 const ParseQuery = require('./modules/ParseQuery')
-// const SupportJsx = require('../packages/jsx')
+const Validator = require('./packages/validator')
+const JSX = require('./packages/jsx')
 
-// require('node-jsx').install({ extension: '.jsx' })
+require('node-jsx').install({ extension: '.jsx' })
 
-// const html = require('./html')
+const html = require('./html')
 
 // class UserInfo extends Controller {
-//   async handle() {
-//     await new Promise(resolve => {
-//       setTimeout(resolve, 1e3)
-//     })
-//     return { ahihi: true }
-//   }
-//   // render() {
-//   //   return html
+//   // async handle() {
+//   //   await new Promise(resolve => {
+//   //     setTimeout(resolve, 1e3)
+//   //   })
+//   //   return { ahihi: true }
 //   // }
+//   render() {
+//     return html
+//   }
+//   validate() {
+//     return {
+//       q: { type: String, required: true }
+//     }
+//   }
 //   match() {
 //     return this.test('/users/:user')
 //   }
 // }
 
-function UserInfo() {
-  if (!this.test('/test/hello')) return this.next()
-  return this.query
-}
+// function UserInfo() {
+//   if (!this.test('/test/hello')) return this.next()
+//   return this.query
+// }
 
 // UserInfo.match = function() {
 //   return this.test('/users/:user')
@@ -36,4 +42,4 @@ class Otherwise extends Controller {
   }
 }
 
-listen([ParseQuery(), UserInfo, Otherwise], 3000)
+listen([ParseQuery(), JSX(html), Otherwise], 3000)

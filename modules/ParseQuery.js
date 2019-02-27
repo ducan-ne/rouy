@@ -5,8 +5,9 @@ module.exports = createParser
 
 function createParser() {
   class Parser extends Controller {
-    handle() {
-      this.query = Object.assign({}, url.parse(this.url, true).query)
+    handle(req) {
+      req.query = Object.assign({}, url.parse(this.url, true).query)
+      this.query = req.query
       this.next()
     }
   }
