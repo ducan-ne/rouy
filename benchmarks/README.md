@@ -1,5 +1,7 @@
 # Benchmark
 
+thanks @rknguyen
+
 - **Machine:** MacBook Pro ( mid 2014 | 2.5 GHz Intel Core i7 | 16 GB 1600 MHz DDR3)
 - **Method:** autocannon -c 100 -d 5 -p 10 localhost:3000 (two rounds; one warm-up, one to measure).
 - **Node:** v11.0.0
